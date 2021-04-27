@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+:root {
+  --back-color: #bdeaff;
+  --card-color: #97bbce;
+  --heading-color: #172b4a;
+  --accent-color: green;
+/*  --light-color: #ede9d0;*/
+  --magic-color: #a8b533;
+  --correct-color: #e0d2b3;
+}
+* {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  /*border-radius:;*/
+}
+html {
+  font-size: 105%;
+  font-weight: 300;
+  background-color: var(--back-color);
+  
+}
+body {
+  line-height: 2;
+}
+
+/*Layout*/
+.container {
+  margin: 5vh auto;
+  max-width: 80ch;
+/*  padding: 50px;*/
+  text-align: center;
+}
+.img-frame{
+  padding: 3vh 2vw;
+}
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+section {
+  margin: 10vh auto;
+}
+
+/*Decoration*/
+.title {
+ /* font: 600 larger "Courgette";*/
+ font-family: "Courgette";
+  font-weight: lighter;
+  color: var(--heading-color);
+}
+h1 { font-size: 3rem;}
+h3 { font-size: 2rem; }
+h4 { font-size: 1.5rem;}
+li {text-align:justify;}
+.bold-p{
+  font: 1em "Courgette";
+  color: var(--accent-color);
+}
+.img-caption {
+  margin: 0;
+  text-align: left;
+  font: bold 1.2 "Roboto";
+  line-height: 1.5;
+}
+.img-caption-bold {
+  font-style: italic;
+  text-decoration: underline;
+}
+.sources {text-align: left;}
+.card {
+ background-color: var(--card-color);
+ border:2px ridge var(--accent-color);
+ border-radius: 5px;
+ box-shadow: 4px 4px 10px 0 rgba(0,0,0,0.2);
+}
+
+.button:hover, .hover, .clickable, .magic:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.19), 6px 6px 6px rgba(0, 0, 0, 0.23);
+}
+.magic {
+  cursor: pointer;
+  box-shadow: 0 0 20px var(--magic-color);
+}
+.quiz {
+  font-size: 1.5rem;
+}
+#input-brahms {
+  height: 4rem; 
+  width: 23vw;
+  margin: auto 1vw;
+  padding: 2rem 1rem;
+  font-size: 1.5rem;
+}
+.button {
+/*  display: block;*/
+  margin: auto;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--heading-color);
+  color: var(--correct-color);
+}
+/*#input-brahms::placeholder {font-size: 1.5rem;}*/
+#hidden { display: none;}
