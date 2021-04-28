@@ -3,6 +3,47 @@ const pin = "1234"; //true
 const pin2 = "12345"; //false
 const pin3 = "12e3"; //false
 
+//WORKS
+function validatePIN(pin) {
+  if ((pin.length !== 4) && (pin.length !== 6)) {
+    return false;
+  }
+  if (pin.split("").every(x => /[0-9]/.test(x))) {
+    return true;
+  }
+  return false;
+}
+
+function validatePIN(pin) {
+  return /^(\d{4}|\d{6})$/.test(pin)
+}
+
+function validatePIN(pin) {
+  var pinlen = pin.length;
+  var isCorrectLength = (pinlen == 4 || pinlen == 6);
+  var hasOnlyNumbers = pin.match(/^\d+$/);
+  if (isCorrectLength && hasOnlyNumbers) {
+    return true;
+  }
+  return false;
+}
+
+function validatePIN(pin) {
+  if ((pin.length !== 4) && (pin.length !== 6)) {
+    return false;
+  }
+  const testDigits = (x) => {
+    if (/[0-9]/.test(x)) {
+      return true;
+    };
+  }
+  if (pin.split("").every(testDigits)) {
+    return true;
+  }
+  return false;
+}
+
+//WRONG
 function valPin2(str) {
   if (str.length !== (4 || 6)) {
     return false;
