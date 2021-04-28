@@ -16,3 +16,25 @@ function filter_list(l) {
 console.log(test(test741));
 console.log(test(test742));
 console.log(test(test743));
+
+//7.5 kata: Anagram finder
+
+var isAnagram = function (test, original) {
+  const try1 = test.toLowerCase().split("").sort().join("");
+  const try2 = original.toLowerCase().split("").sort().join("");
+  return try1 == try2;
+};
+
+// write the function isAnagram
+var isAnagram = function (test, original) {
+  var t = test.toLowerCase().split('').sort().join('');
+  var o = original.toLowerCase().split('').sort().join('');
+  return (t == o) ? true : false;
+};
+
+String.prototype.sortLetters = function () {
+  return this.toLowerCase().split('').sort().join('');
+}
+var isAnagram = function (test, original) {
+  return test.sortLetters() == original.sortLetters();
+};
