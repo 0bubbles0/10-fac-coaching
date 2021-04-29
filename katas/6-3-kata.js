@@ -28,6 +28,16 @@ console.log(arrayDiff1([1, 2], [1]));
 console.log("[1,2,2,2,3], [2] -> [1, 3]");
 console.log(arrayDiff1([1, 2, 2, 2, 3], [2]));
 
+//Other Solutions
+function array_diff(a, b) {
+  return a.filter(e => !b.includes(e));
+}
+
+function array_diff(a, b) {
+  return a.filter(function (x) { return b.indexOf(x) == -1; });
+}
+
+
 /*
 console.log();
 console.log();
