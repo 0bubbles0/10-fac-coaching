@@ -9,6 +9,7 @@
   border: black 4px double;
   background: floralwhite;
   text-align: center;
+  width: 5vw;
   padding: 3vh;
   cursor: pointer;
 }
