@@ -8,7 +8,6 @@ let currentImageIndex = 0;
 
 function updateImageIndex() {
   let upperLimit = carouselImages.length - 1;
-
   if (currentImageIndex === upperLimit) {
     currentImageIndex = 0;
   } else {
@@ -28,7 +27,6 @@ function updateVisibilities() {
     }
   })
 }
-
 
 let carouselInterval;
 
