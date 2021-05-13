@@ -1,4 +1,17 @@
+#carousel-container {
+  display: flex;
+  margin-bottom: 
+}
+
 .carousel-image {
   width: 60vw;
   height: auto;
+}
+
+.img-visible {
+  display: block;
+}
+
+.img-hidden {
+  display: none;
 }
