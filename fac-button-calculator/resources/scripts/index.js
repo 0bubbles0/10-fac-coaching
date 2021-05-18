@@ -5,17 +5,19 @@ const numbers = document.getElementsByClassName("number");
 //const numArr = array.from(numbers); Wrong because syntax, like floor
 const numArr = Array.from(numbers);
 const clickArr = [];
-const button = document.getElementById("go-button");
 //console.log(numArr);
 //Add event listener to every element. e is an object here, check Browser console
 function addActiveClass(element) {
   console.log(element.target);
+  console.log(element.classList);
   element.classList.toggle("active");
+
   if (element.classList.contains("active")) {
     clickArr.push(element);
   } else {
     clickArr.splice(clickArr.indexOf(element), 1);
   }
+
   if (clickArr.length > 5) {
     clickArr[0].classList.toggle("active");
     clickArr.shift();
@@ -28,6 +30,45 @@ function addActiveClass(element) {
     addActiveClass(e);
   });
 }*/
+
+const newNum = numArr.map(function (number) {
+  number.addEventListener("click", event => {
+    addActiveClass(event.target);
+  });
+});
+
+//Get the button, and the radio button
+const goButton = document.getElementById("go-button");
+const h3 = document.getElementById("result-output");
+const doubler = document.getElementById("doubler");
+const multiples = document.getElementById("multiples");
+const radioArray = [doubler, multiples];
+
+//function that will output the numbers selected
+function getValuesFromElements(element) {
+  //Return textContent of that element
+  return element.textContent;
+}
+
+function replaceResult() {
+  //use getsValuesFromElements() to map textContent of each element into a new array of all textContents
+  //const textArr = clickArr.map(x => getValuesFromElements(x));
+  const textArr = clickArr.map(x => parseInt(x.textContent));
+
+  console.log(clickArr);
+  const resultArr = [];
+  h3.textContent = textArr;
+}
+
+//Event Listener
+goButton.addEventListener("click", replaceResult);
+
+//radioArray.addEventListener();
+//const calcNum = numArr.map(function (x) { });
+
+
+
+/*Calculation */
 function doubleAll(arr) {
   console.log("Double");
   return arr.map(value => value * 2);
@@ -43,20 +84,12 @@ function show3Divs(arr) {
     }
   )
 }
-
-function showResult(x) {
-
-}
-
-const newNum = numArr.map(function (number) {
-  number.addEventListener("click", event => {
-    addActiveClass(event.target);
-  });
-});
-
-const newResult = 
-
-)
+/*
+function showResult(x) {}
+*/
+/*
+const newResult =
+*/
 
 /*My attempt
 
