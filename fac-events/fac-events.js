@@ -18,6 +18,7 @@ const makeBlueCanvas = () => {
 /*merge*/
 const changeBackgroundColor = (color) => {
   contentSection.classList.add = color + "-background";
+  contentSection.style.background = color;
 }
 /*call functions*/
 redButton.addEventListener("click", () => { changeBackgroundColor("red") });
