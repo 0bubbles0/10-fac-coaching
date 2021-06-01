@@ -71,6 +71,27 @@ const rps = (p1, p2) => {
   else { return 'Player 2 won!' }
 };
 
+const winner1 = ["scissorspaper", "paperrock", "rockscissors"];
+const rps = (p1, p2) => {
+  return p1 === p2 ? `Draw!` : `Player ${winner1.indexOf(p1 + p2) !== -1 ? 1 : 2} won!`;
+};
+
+const win1 = {
+  "rock": "scissors",
+  "scissors": "paper",
+  "paper": "rock",
+}
+const rps = (p1, p2) => {
+  if (p1 === p2) {
+    return "Draw!";
+  } else return `Player ${win1[p1] == p2 ? 1 : 2} won!`;
+};
+
+const rps = (p1, p2) => {
+  return p1 === p2 ? `Draw!` : `Player ${win1[p1] === p2 ? 1 : 2} won!`;
+}
+
+//Other solutions
 const rps = (p1, p2) => {
   if (p1 === p2) return "Draw!";
   var rules = { rock: "scissors", paper: "rock", scissors: "paper" };
