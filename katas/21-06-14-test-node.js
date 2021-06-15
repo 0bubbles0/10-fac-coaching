@@ -26,6 +26,7 @@ function listSquared(m, n) {
   return arr;
 }
 
+/*
 console.log(findDivs(250));
 console.log(listSquared(1, 250));
 
@@ -39,3 +40,24 @@ for (let i = arr.length - 1; i > 0; i--) {
 
 Math.max.apply(null, arr);
 Math.min.apply(null, arr);
+
+console.log("John".constructor);
+
+"John".constructor;    // [Function: String]
+(3.14).constructor; // [Function: Number]
+false.constructor; // [Function: Boolean]
+[1, 2, 3, 4].constructor; // [Function: Array]
+new Date().constructor; // [Function: Date]
+({ name: 'John', age: 34 }).constructor; // [Function: Object]
+(function a(x) { return x }).constructor; //[Function: Function];
+
+1.	function isArray(myArray) {
+  return myArray.constructor === Array;
+}
+2.	function isArray(myArray) {
+  return myArray.constructor.toString().indexOf("Array") > -1;
+}
+
+typeof (x = + "John"); //number, NaN
+var res = /W3S/g.source; //returns W3S
+*/
