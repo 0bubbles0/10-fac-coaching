@@ -23,7 +23,7 @@ Note about errors
 
 If you are timing out, running out of memory, or get any kind of "error", read on. Both n and address could get upto 500 billion with over 200 random tests. If you try to store the addresses of 500 billion houses in a list then you will run out of memory and the tests will crash. This is not a kata problem so please don't post an issue. Similarly if the tests don't complete within 12 seconds then you also fail.
 
-To solve this, you need to think of a way to do the kata without making massive lists or huge for loops. Read the discourse for some inspiration :)
+To solve this, you need to think of a way to do the kata without making massive lists or huge for loops. Read the discourse for some inspiration
 */
 
 function overTheRoad(address, n) {
